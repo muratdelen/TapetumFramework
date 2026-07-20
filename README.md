@@ -4,6 +4,14 @@ Official implementation and reproducibility materials for **RetinexTapetum: A Bi
 
 RetinexTapetum is a compact Retinex-based low-light image enhancement framework with darkness-aware spatial amplification, tapetum-guided modulation, and bounded residual refinement.
 
+## Supplementary files and experiment archive
+
+Files that are not stored directly in this GitHub repository can be accessed from the following Google Drive archive:
+
+**[Open the TAPETUM Google Drive archive](https://drive.google.com/drive/folders/13ayyEC3V1wWdX3AXdfL8y7VqnL8eTPFT?usp=drive_link)**
+
+This archive is the supplementary storage location referenced by this repository. It includes large checkpoints, datasets, generated outputs, Colab notebooks, comparison results, speed measurements, hyperparameter-search outputs, manuscript figures, and baseline experiment folders.
+
 ## Repository contents
 
 - `src/model.py` — RetinexTapetum architecture
