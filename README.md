@@ -10,6 +10,15 @@ Files that are not stored directly in this GitHub repository can be accessed fro
 
 **[Open the TAPETUM Google Drive archive](https://drive.google.com/drive/folders/13ayyEC3V1wWdX3AXdfL8y7VqnL8eTPFT?usp=drive_link)**
 
+### Direct files
+
+The following project items are linked using their original Google Drive names:
+
+- **[RetinexTapetum_v1 ALL models.ipynb](https://drive.google.com/file/d/1GwDRRlDcRVES9vXwqyjPFhnXhTDoSW1c/view?usp=drive_link)**
+- **[RetinexTapetum](https://drive.google.com/drive/folders/1kkPLkUoDK_Zvo9jOW7GSt0xoiFatF9Hb?usp=drive_link)**
+
+The first item is the complete Colab notebook. The second item is the RetinexTapetum source and experiment folder.
+
 This archive is the supplementary storage location referenced by this repository. It includes large checkpoints, datasets, generated outputs, Colab notebooks, comparison results, speed measurements, hyperparameter-search outputs, manuscript figures, and baseline experiment folders.
 
 ## Repository contents
