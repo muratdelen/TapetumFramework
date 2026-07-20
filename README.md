@@ -17,6 +17,25 @@ RetinexTapetum is a compact Retinex-based low-light image enhancement framework 
 - `diagnostics/RetinexTapetum_Ablation_Diagnostics_Dataset_Aware.py` — checkpoint-based inference-time interventions
 - `paper/` — manuscript LaTeX sources included with the repository snapshot
 
+## Google Drive experiment archive
+
+Large experiment artifacts and auxiliary files that are not suitable for direct storage in GitHub are available in the project Google Drive archive:
+
+**[TAPETUM Google Drive experiment archive](https://drive.google.com/drive/folders/13ayyEC3V1wWdX3AXdfL8y7VqnL8eTPFT?usp=drive_link)**
+
+The archive contains the broader experimental workspace, including:
+
+- RetinexTapetum source snapshots and Colab workflows
+- dataset-specific checkpoints and generated outputs
+- LOL-v1, LOL-v2, and UHD-LL down4 experiment folders
+- baseline method folders for RetinexFormer, URetinex-Net++, KinD++, RetinexNet, RUAS, Zero-DCE, and LIME
+- speed and complexity measurements under `SpeedMetrics`
+- hyperparameter-search outputs under `HyperparameterSearch`
+- manuscript figures, qualitative comparisons, and supporting paper materials under `paper_retinextapetum`
+- mobile-oriented experiments under `RetinexTapetumMobile`
+
+The GitHub repository is the canonical location for version-controlled source code. Google Drive is used for large checkpoints, datasets, experiment outputs, notebooks, and supporting artifacts. Availability of third-party datasets and baseline files remains subject to their original licenses and distribution terms.
+
 ## Environment
 
 Python 3.10+ is recommended.
@@ -45,7 +64,7 @@ dataset_root/
     └── Normal/
 ```
 
-The paper evaluates LOL-v1, LOL-v2 Real-Captured, LOL-v2 Synthetic, and UHD-LL down4. Datasets and third-party checkpoints are not redistributed here; obtain them from their original sources and comply with their licenses.
+The paper evaluates LOL-v1, LOL-v2 Real-Captured, LOL-v2 Synthetic, and UHD-LL down4. Datasets and third-party checkpoints are not redistributed through GitHub; use the linked archive only where redistribution is permitted and comply with the original licenses.
 
 ## Training
 
@@ -76,7 +95,7 @@ The script in `diagnostics/` suppresses selected pathways only at inference time
 - Use the checkpoint corresponding to each dataset.
 - Keep RGB inputs normalized to `[0, 1]`.
 - The common speed protocol in the manuscript uses an FP32 input of `1 x 3 x 256 x 256`, batch size 1, 50 warm-up passes, and 500 timed passes.
-- Large datasets, generated result images, and model checkpoints are not committed to this repository.
+- Large datasets, generated result images, model checkpoints, and complete experiment archives are hosted in the linked Google Drive folder rather than committed to GitHub.
 
 ## Citation
 
@@ -90,6 +109,8 @@ The script in `diagnostics/` suppresses selected pathways only at inference time
 ```
 
 Repository: `https://github.com/muratdelen/TapetumFramework`
+
+Experiment archive: `https://drive.google.com/drive/folders/13ayyEC3V1wWdX3AXdfL8y7VqnL8eTPFT?usp=drive_link`
 
 ## License
 
