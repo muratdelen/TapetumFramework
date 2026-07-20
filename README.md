@@ -4,6 +4,50 @@ Official implementation and reproducibility materials for **RetinexTapetum: A Bi
 
 RetinexTapetum is a compact Retinex-based low-light image enhancement framework with darkness-aware spatial amplification, tapetum-guided modulation, and bounded residual refinement.
 
+## Project overview
+
+RetinexTapetum translates the functional light-reuse principle associated with the biological tapetum lucidum into a learnable image-domain enhancement mechanism. It does not simulate eye anatomy or physical photon transport. Instead, it decomposes a low-light RGB image into reflectance-like and illumination-like representations, estimates where enhancement is needed, applies bounded spatial amplification, and performs a final residual color-detail correction.
+
+The main processing stages are:
+
+1. Retinex-inspired decomposition into reflectance-like and illumination-like maps.
+2. Darkness-prior estimation from the illumination-like representation.
+3. Tapetum-response prediction and darkness-gated spatial amplification.
+4. Multiplicative illumination update.
+5. Bounded residual refinement of color and fine detail.
+
+The architecture contains approximately **0.5365 million trainable parameters** and is evaluated on **LOL-v1**, **LOL-v2 Real-Captured**, **LOL-v2 Synthetic**, and **UHD-LL down4** using PSNR, SSIM, LPIPS, runtime, and complexity measurements.
+
+### RetinexTapetum architecture
+
+[![RetinexTapetum architecture](https://drive.google.com/uc?export=view&id=1KJKBzKQKPOUAr8konzF114MismhXTkXr)](https://drive.google.com/file/d/1KJKBzKQKPOUAr8konzF114MismhXTkXr/view?usp=drive_link)
+
+The diagram shows the complete pathway from Retinex decomposition through darkness-aware tapetum amplification to final reconstruction and residual refinement.
+
+### Camera-to-enhancement concept
+
+[![Camera-to-enhancement RetinexTapetum pipeline](https://drive.google.com/uc?export=view&id=1GaRCK9p1M2jbMKE5v5FJRxTlfhVQZNKB)](https://drive.google.com/file/d/1GaRCK9p1M2jbMKE5v5FJRxTlfhVQZNKB/view?usp=drive_link)
+
+This figure separates physical image acquisition from the digital enhancement process and clarifies that RetinexTapetum operates on already captured image data.
+
+### Cross-dataset visual results
+
+[![RetinexTapetum cross-dataset visual results](https://drive.google.com/uc?export=view&id=196UM2MoU8TUp2nJvFv3UQAkMnH419uGK)](https://drive.google.com/file/d/196UM2MoU8TUp2nJvFv3UQAkMnH419uGK/view?usp=drive_link)
+
+The qualitative panel presents representative outputs and enlarged regions from the four evaluated datasets. Quantitative conclusions should be based on the complete test-set metrics rather than individual examples.
+
+## Paper materials
+
+The manuscript figures, comparison outputs, supporting images, and paper-oriented result files are available here:
+
+**[paper_retinextapetum](https://drive.google.com/drive/folders/1b8M6fptCWjjXxKg79ulttrIM3_xvwuPj?usp=drive_link)**
+
+This folder includes:
+
+- `comparison_results/` — qualitative comparisons and multi-dataset outputs
+- `images/` — architecture, biological motivation, Retinex background, and result figures
+- `figures/` — manuscript figure workspace
+
 ## Supplementary files and experiment archive
 
 Files that are not stored directly in this GitHub repository can be accessed from the following Google Drive archive:
@@ -16,8 +60,9 @@ The following project items are linked using their original Google Drive names:
 
 - **[RetinexTapetum_v1 ALL models.ipynb](https://drive.google.com/file/d/1GwDRRlDcRVES9vXwqyjPFhnXhTDoSW1c/view?usp=drive_link)**
 - **[RetinexTapetum](https://drive.google.com/drive/folders/1kkPLkUoDK_Zvo9jOW7GSt0xoiFatF9Hb?usp=drive_link)**
+- **[paper_retinextapetum](https://drive.google.com/drive/folders/1b8M6fptCWjjXxKg79ulttrIM3_xvwuPj?usp=drive_link)**
 
-The first item is the complete Colab notebook. The second item is the RetinexTapetum source and experiment folder.
+The first item is the complete Colab notebook. The second item is the RetinexTapetum source and experiment folder. The third item contains paper figures, comparison images, and manuscript-oriented supporting materials.
 
 This archive is the supplementary storage location referenced by this repository. It includes large checkpoints, datasets, generated outputs, Colab notebooks, comparison results, speed measurements, hyperparameter-search outputs, manuscript figures, and baseline experiment folders.
 
@@ -128,6 +173,8 @@ The script in `diagnostics/` suppresses selected pathways only at inference time
 Repository: `https://github.com/muratdelen/TapetumFramework`
 
 Experiment archive: `https://drive.google.com/drive/folders/13ayyEC3V1wWdX3AXdfL8y7VqnL8eTPFT?usp=drive_link`
+
+Paper materials: `https://drive.google.com/drive/folders/1b8M6fptCWjjXxKg79ulttrIM3_xvwuPj?usp=drive_link`
 
 ## License
 
